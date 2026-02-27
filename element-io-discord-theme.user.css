@@ -1,0 +1,73 @@
+/* ==UserStyle==
+@name        Element.io Discord-like style
+@namespace   https://github.com/jessedufrene
+@version     1.0
+@description A style to make the Element web app look closer to Discord
+@author      Jesse Dufrene
+@homepageURL https://github.com/jessedufrene/element-discord-userstyle
+@supportURL  https://github.com/jessedufrene/element-discord-userstyle/issues
+@updateURL   https://raw.githubusercontent.com/jessedufrene/element-discord-userstyle/refs/heads/main/element-io-discord-theme.user.css
+@license     GPL-3.0
+==/UserStyle== */
+
+@-moz-document domain("app.element.io"), domain("develop.element.io") {
+    /* server list */
+    .mx_SpacePanel.newUi {
+        background-color: rgb(18, 18, 20)
+    }
+
+    /* channel list */
+    .mx_RoomListPanel {
+        background-color: rgb(18, 18, 20)
+    }
+
+    /* chat header */
+    .mx_RoomHeader {
+        background-color: rgb(26, 26, 30)
+    }
+
+    /* disable hover animation on chat header */
+    .mx_RoomHeader:hover {
+        background: unset
+    }
+
+    /* main chat area */
+    .mx_MatrixChat > :not(.mx_LeftPanel):not(.mx_SpacePanel):not(.mx_ResizeHandle):not(.mx_LeftPanel_outerWrapper) {
+        background-color: rgb(26, 26, 30)
+    }
+
+    /* recolor message hover */
+    .mx_EventTile[data-layout=group]:hover .mx_EventTile_line,
+    .mx_EventTile[data-layout=irc]:hover .mx_EventTile_line {
+        background-color: rgb(36, 36, 40)
+    }
+
+    /* text entry area */
+    .mx_RoomView .mx_MessageComposer {
+        background-color: rgb(34, 35, 39);
+        padding-bottom: 0px;
+        width: calc(100% - 1em);
+        margin: 0px 0.5em 0.5em;
+        border-radius: 8px
+    }
+
+    /* realign text entry field when security icon isnt there */
+    .mx_MessageComposer_e2eIconWrapper {
+        position: unset;
+        margin-left: 0px;
+        margin-right: .8em;
+    }
+    .mx_MessageComposer_wrapper {
+        padding-left: 1em;
+    }
+
+    /* give extra space around text spanning multiple lines in entry field */
+    .mx_SendMessageComposer .mx_BasicMessageComposer .mx_BasicMessageComposer_input {
+        margin: 15.5px 0px
+    }
+
+    /* right panel */
+    .mx_RightPanel {
+        background-color: rgb(26, 26, 30)
+    }
+}
